@@ -1,0 +1,9 @@
+{
+	"name": "adf-cdp-stg-n3",
+	"location": "chinanorth3",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f608fe21-0ca7-4e80-a9cd-e81779d444d4",
+		"tenantId": "6a596574-1518-4214-840e-216bb42592e7"
+	}
+}

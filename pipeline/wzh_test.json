@@ -1,0 +1,676 @@
+{
+	"name": "wzh_test",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": true,
+					"secureInput": true
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ecrp-csv/activateCustomerListSync/20160831/activateCustomerListSyncByActiveTime_20160831.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "default.ods_activatecustomerlistsync"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": false,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureDatabricksDeltaLakeSink",
+						"importSettings": {
+							"type": "AzureDatabricksDeltaLakeImportCommand"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "country",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "subPlatform",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sub_platform",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "discount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "discount",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "customerFrom",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customer_from",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "source",
+									"type": "String"
+								},
+								"sink": {
+									"name": "source",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "memberCard",
+									"type": "String"
+								},
+								"sink": {
+									"name": "member_card",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "sgGuideId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sg_guideId",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "platform",
+									"type": "String"
+								},
+								"sink": {
+									"name": "platform",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "marryStatus",
+									"type": "String"
+								},
+								"sink": {
+									"name": "marry_status",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "nick",
+									"type": "String"
+								},
+								"sink": {
+									"name": "nick",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "bindTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "bind_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "customerId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customer_id",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "assetJson",
+									"type": "String"
+								},
+								"sink": {
+									"name": "asset_json",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "id",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "shopId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "shop_id",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "sgRecruitShopId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sg_recruit_shopId",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "gradeName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "grade_name",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "sex",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sex",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "mobile",
+									"type": "String"
+								},
+								"sink": {
+									"name": "mobile",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "activateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "activate_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "updateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "update_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "customerName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customer_name",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "babySex",
+									"type": "String"
+								},
+								"sink": {
+									"name": "baby_sex",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "outAlias",
+									"type": "String"
+								},
+								"sink": {
+									"name": "out_alias",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "grade",
+									"type": "String"
+								},
+								"sink": {
+									"name": "grade",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "babyName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "baby_name",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "sgRecruitGuideId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sg_recruit_guideId",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "sgShopId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sg_shopId",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "isActivate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_activate",
+									"type": "Int"
+								}
+							},
+							{
+								"source": {
+									"name": "city",
+									"type": "String"
+								},
+								"sink": {
+									"name": "city",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "province",
+									"type": "String"
+								},
+								"sink": {
+									"name": "province",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "customerHeadImage",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customer_headImage",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "birthday",
+									"type": "String"
+								},
+								"sink": {
+									"name": "birthday",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "email",
+									"type": "String"
+								},
+								"sink": {
+									"name": "email",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "address",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "district",
+									"type": "String"
+								},
+								"sink": {
+									"name": "district",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "telPhone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tel_phone",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "buyerAlipayNo",
+									"type": "String"
+								},
+								"sink": {
+									"name": "buyer_alipay_no",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "svMobile",
+									"type": "String"
+								},
+								"sink": {
+									"name": "sv_mobile",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "customerRemark",
+									"type": "String"
+								},
+								"sink": {
+									"name": "customer_remark",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "assetArr",
+									"type": "String"
+								},
+								"sink": {
+									"name": "asset_arr",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "babyBirthday",
+									"type": "String"
+								},
+								"sink": {
+									"name": "baby_birthday",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "cardReceiveTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "card_receive_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "extJson",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ext_json",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "fansStatus",
+									"type": "String"
+								},
+								"sink": {
+									"name": "fans_status",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "gradeRelegationTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "grade_relegation_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "infos",
+									"type": "String"
+								},
+								"sink": {
+									"name": "infos",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "inviterInfoList",
+									"type": "String"
+								},
+								"sink": {
+									"name": "inviter_info_list",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "isMemberBlack",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_member_black",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "isTBMemberShip",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_tb_member_ship",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "isUnsubscribe",
+									"type": "String"
+								},
+								"sink": {
+									"name": "is_unsubscribe",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "lastConcernTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "last_concern_time",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "mixMobile",
+									"type": "String"
+								},
+								"sink": {
+									"name": "mix_mobile",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "mixMobileList",
+									"type": "String"
+								},
+								"sink": {
+									"name": "mix_mobile_list",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "outShopId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "out_shopId",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "qq",
+									"type": "String"
+								},
+								"sink": {
+									"name": "qq",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "rightBlackStr",
+									"type": "String"
+								},
+								"sink": {
+									"name": "right_black_str",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "shopCustomerVoList",
+									"type": "String"
+								},
+								"sink": {
+									"name": "shop_customer_vo_list",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "userType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "user_type",
+									"type": "string"
+								}
+							},
+							{
+								"source": {
+									"name": "viewId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "view_id",
+									"type": "string"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "stcdpstgtt",
+						"type": "DatasetReference",
+						"parameters": {
+							"fileDate": "20160831"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureDatabricksDeltaLakeDataset1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "TEST"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-02-13T07:35:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

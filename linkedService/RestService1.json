@@ -1,0 +1,19 @@
+{
+	"name": "RestService1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://stg-cdp.bosch-bsdt.com/etlboshi/ecrp/testRedis",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "cyhfunction( https://cyhfunction.chinacloudsites.cn )",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyYWZhMWQ3My04ODdiLTQ1YTYtYTU4YS0wMjRmN2EwMGZhNDUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "RestResource1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService2",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"access_token": "65_u3W7nuzB5aYMAyO2kSI3JPzDuhTrEMu6wSTt9uDiQYfJYItW8lJMw2OxaHb6VwM7kdENBCeGv-JdQchbfW0q3BnlEY__3fL4J8Qo8DSdZNGJa1YX9B1AVJspHvUJCJfAHAOHO",
+				"next_openid": " "
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

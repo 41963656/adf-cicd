@@ -1,0 +1,24 @@
+{
+	"name": "tradeSynTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "wzh_databricks",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-01-19T06:00:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}

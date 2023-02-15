@@ -1,0 +1,21 @@
+{
+	"name": "RestService2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"access_token": {
+				"type": "String"
+			},
+			"next_openid": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.weixin.qq.com/cgi-bin/user/get?access_token=@{linkedService().access_token}&next_openid=@{linkedService().next_openid}",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

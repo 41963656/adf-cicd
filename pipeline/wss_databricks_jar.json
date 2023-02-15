@@ -1,0 +1,42 @@
+{
+	"name": "wss_databricks_jar",
+	"properties": {
+		"activities": [
+			{
+				"name": "Jar1",
+				"type": "DatabricksSparkJar",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"mainClassName": "com.wq.system.DataSync",
+					"parameters": [
+						"gggg",
+						"jjjjj"
+					],
+					"libraries": [
+						{
+							"jar": "dbfs:/FileStore/ecrp_2_0_0.jar"
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "TEST"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-02-13T07:35:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "stcdpstgtt",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stcdpstgntt.dfs.core.chinacloudapi.cn/"
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "source_active",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "stcdpstgn3",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			},
+			"dateName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@{dataset().tableName}_@{dataset().dateName}.csv",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{dataset().tableName}/@{dataset().dateName}",
+					"type": "Expression"
+				},
+				"container": "ecrp-csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

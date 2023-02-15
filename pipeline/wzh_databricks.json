@@ -1,0 +1,43 @@
+{
+	"name": "wzh_databricks",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/external.jason.chen@boschcn.partner.onmschina.cn/tradeSynIns",
+					"baseParameters": {
+						"startDate": {
+							"value": "@formatDateTime(addDays(convertFromUtc(utcnow(), 'China Standard Time'), -1),'yyyy-MM-dd')",
+							"type": "Expression"
+						},
+						"endDate": {
+							"value": "@formatDateTime(convertFromUtc(utcnow(), 'China Standard Time'),'yyyy-MM-dd')",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "TEST"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-02-13T07:35:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,258 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "default",
+			"table": "ods_activatecustomerlistsync"
+		},
+		"schema": [
+			{
+				"name": "country",
+				"type": "string"
+			},
+			{
+				"name": "sub_platform",
+				"type": "integer"
+			},
+			{
+				"name": "discount",
+				"type": "string"
+			},
+			{
+				"name": "customer_from",
+				"type": "integer"
+			},
+			{
+				"name": "source",
+				"type": "string"
+			},
+			{
+				"name": "member_card",
+				"type": "string"
+			},
+			{
+				"name": "sg_guideId",
+				"type": "integer"
+			},
+			{
+				"name": "platform",
+				"type": "integer"
+			},
+			{
+				"name": "marry_status",
+				"type": "integer"
+			},
+			{
+				"name": "nick",
+				"type": "string"
+			},
+			{
+				"name": "bind_time",
+				"type": "string"
+			},
+			{
+				"name": "customer_id",
+				"type": "string"
+			},
+			{
+				"name": "asset_json",
+				"type": "string"
+			},
+			{
+				"name": "id",
+				"type": "integer"
+			},
+			{
+				"name": "shop_id",
+				"type": "string"
+			},
+			{
+				"name": "sg_recruit_shopId",
+				"type": "integer"
+			},
+			{
+				"name": "grade_name",
+				"type": "string"
+			},
+			{
+				"name": "sex",
+				"type": "integer"
+			},
+			{
+				"name": "mobile",
+				"type": "string"
+			},
+			{
+				"name": "activate_time",
+				"type": "string"
+			},
+			{
+				"name": "update_time",
+				"type": "string"
+			},
+			{
+				"name": "customer_name",
+				"type": "string"
+			},
+			{
+				"name": "baby_sex",
+				"type": "integer"
+			},
+			{
+				"name": "out_alias",
+				"type": "string"
+			},
+			{
+				"name": "grade",
+				"type": "integer"
+			},
+			{
+				"name": "baby_name",
+				"type": "string"
+			},
+			{
+				"name": "sg_recruit_guideId",
+				"type": "integer"
+			},
+			{
+				"name": "sg_shopId",
+				"type": "integer"
+			},
+			{
+				"name": "is_activate",
+				"type": "integer"
+			},
+			{
+				"name": "city",
+				"type": "string"
+			},
+			{
+				"name": "province",
+				"type": "string"
+			},
+			{
+				"name": "customer_headImage",
+				"type": "string"
+			},
+			{
+				"name": "birthday",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "address",
+				"type": "string"
+			},
+			{
+				"name": "district",
+				"type": "string"
+			},
+			{
+				"name": "tel_phone",
+				"type": "string"
+			},
+			{
+				"name": "buyer_alipay_no",
+				"type": "string"
+			},
+			{
+				"name": "sv_mobile",
+				"type": "string"
+			},
+			{
+				"name": "customer_remark",
+				"type": "string"
+			},
+			{
+				"name": "asset_arr",
+				"type": "string"
+			},
+			{
+				"name": "baby_birthday",
+				"type": "string"
+			},
+			{
+				"name": "card_receive_time",
+				"type": "string"
+			},
+			{
+				"name": "ext_json",
+				"type": "string"
+			},
+			{
+				"name": "fans_status",
+				"type": "string"
+			},
+			{
+				"name": "grade_relegation_time",
+				"type": "string"
+			},
+			{
+				"name": "infos",
+				"type": "string"
+			},
+			{
+				"name": "inviter_info_list",
+				"type": "string"
+			},
+			{
+				"name": "is_member_black",
+				"type": "string"
+			},
+			{
+				"name": "is_tb_member_ship",
+				"type": "string"
+			},
+			{
+				"name": "is_unsubscribe",
+				"type": "string"
+			},
+			{
+				"name": "last_concern_time",
+				"type": "string"
+			},
+			{
+				"name": "mix_mobile",
+				"type": "string"
+			},
+			{
+				"name": "mix_mobile_list",
+				"type": "string"
+			},
+			{
+				"name": "out_shopId",
+				"type": "string"
+			},
+			{
+				"name": "qq",
+				"type": "string"
+			},
+			{
+				"name": "right_black_str",
+				"type": "string"
+			},
+			{
+				"name": "shop_customer_vo_list",
+				"type": "string"
+			},
+			{
+				"name": "user_type",
+				"type": "string"
+			},
+			{
+				"name": "view_id",
+				"type": "string"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
